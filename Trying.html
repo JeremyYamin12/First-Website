@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Our Minimalistic Website</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+            color: #333;
+            text-align: center;
+        }
+        header {
+            background-color: #008CBA;
+            color: white;
+            padding: 20px 0;
+        }
+        section {
+            padding: 40px 20px;
+        }
+        .container {
+            max-width: 800px;
+            margin: auto;
+        }
+        footer {
+            background-color: #333;
+            color: white;
+            padding: 20px 0;
+            position: fixed;
+            width: 100%;
+            bottom: 0;
+        }
+        button {
+            background-color: #008CBA;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            cursor: pointer;
+            margin-top: 20px;
+            border-radius: 5px;
+        }
+        button:hover {
+            background-color: #005f73;
+        }
+        .useful-section {
+            background-color: #e2e8f0;
+            padding: 40px 20px;
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <h1>Welcome to Our Website</h1>
+</header>
+
+<section>
+    <div class="container">
+        <h2>About Us</h2>
+        <p>We are a group dedicated to providing useful resources and tools for everyone. Our mission is to create minimalistic, user-friendly solutions to make life easier.</p>
+    </div>
+</section>
+
+<section>
+    <div class="container">
+        <h2>Our Purpose</h2>
+        <p>Our purpose is to help people by offering simple and efficient tools that can be used daily. Whether it's for learning, productivity, or entertainment, we believe that minimalism is the key to clarity and success.</p>
+    </div>
+</section>
+
+<section class="useful-section">
+    <div class="container">
+        <h2>Useful Tool</h2>
+        <p>Click the button below to generate a random motivational quote to inspire you throughout your day!</p>
+        <button onclick="generateQuote()">Generate Quote</button>
+        <p id="quote"></p>
+    </div>
+</section>
+
+<footer>
+    <p>&copy; 2024 Our Website. All Rights Reserved.</p>
+</footer>
+
+<script>
+    function generateQuote() {
+        const quotes = [
+            "Believe you can and you're halfway there.",
+            "Do not wait for the perfect moment, take the moment and make it perfect.",
+            "Success is not final, failure is not fatal: It is the courage to continue that counts.",
+            "You are never too old to set another goal or to dream a new dream.",
+            "The only limit to our realization of tomorrow is our doubts of today."
+        ];
+        const randomIndex = Math.floor(Math.random() * quotes.length);
+        document.getElementById('quote').innerText = quotes[randomIndex];
+    }
+</script>
+
+</body>
+</html>
